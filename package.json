@@ -1,0 +1,22 @@
+{
+  "name": "stream-overlay",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify -p tinyify ./index.js -o ./index.min.js",
+    "start": "browserify ./index.js -o ./index.min.js"
+  },
+  "author": "Muggy Ate",
+  "license": "MIT",
+  "dependencies": {
+    "proxymity": "github:muggy8/proxymity",
+    "tslib": "^2.3.1",
+    "youtube-chat": "^1.1.0",
+    "youtube-live-chat": "^1.0.3"
+  },
+  "devDependencies": {
+    "tinyify": "^3.0.0"
+  }
+}
