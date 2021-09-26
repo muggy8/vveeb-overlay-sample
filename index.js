@@ -19,11 +19,12 @@ if (document.body.dataset.apikey && document.body.dataset.channelid){
   `
 
   let model = {
-  	messages: [],
+  	messages: []
   }
 
   yt.on("message", function(message){
   	model.messages.unshift(message)
+    model.messages.splice(10)
   })
   yt.on('ready', function(){
     console.log("ready")
