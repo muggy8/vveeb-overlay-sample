@@ -1,4 +1,4 @@
 node_modules/*
-Core/*
+live2D-sample/Core/*
 
-!Core/README.md
+!live2D-sample/Core/README.md

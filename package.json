@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "browserify -p tinyify ./index.js -o ./index.min.js",
-    "start": "browserify ./index.js -o ./index.min.js"
+    "build": "browserify -p tinyify ./live2D-sample/index.js -o ./live2D-sample/index.min.js",
+    "start": "browserify ./live2D-sample/index.js -o ./live2D-sample/index.min.js"
   },
   "author": "Muggy Ate",
   "license": "MIT",
