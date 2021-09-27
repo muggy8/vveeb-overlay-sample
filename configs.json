@@ -1,0 +1,62 @@
+{
+	"chatboxSettings": {
+		"// about_showChatbox": "if you want to show your chat box in the overlay while streaming then change this to true. This is required to be true if you want to define the youtube api settings below",
+		"showChatbox": false,
+
+		"// about_positioning": "this lets you control which edge the chat box is attached to. the vertical options are 'top' or 'bottom' and the horizontal options are 'left' or 'right'",
+	  "positionVertical": "top",
+	  "positionHorizontal": "right",
+
+	  "// about_positioningOffset": "this lets you control the the number of pixels from the edge of the horizontal and vertical position",
+	  "positionVerticalOffset": 0,
+	  "positionHorizontalOffset": 0,
+
+	  "// about_chatDimentions": "this is the width and height of the chat box that is to be displayed.",
+	  "chatWidth": 160,
+	  "chatHeight": 144
+	},
+	"youtubeSettings": {
+		"// about_apikeys": "if you want to show your youtube chat in your overlay when stream is active, declare your own youtube API key and channel id here.",
+		"apiKey": "",
+		"channelId": "",
+
+		"// about_messageColor": "this is to controle the color of the text that shows up in the chat. the value is an RGB hex code.",
+	  "mesageColor": "000000",
+	  "messageOutlineColor": "FFFFFF"
+	},
+	"live2DSettings": {
+	  "// about_showModel":"if you want to show a live2d based vtuber model then change this to true",
+	  "showModel":false,
+
+	  "// about_background": "declare your model background color here. the values goes from 0 to 1. if you want to have a transparent background, you dont have to chagne anything",
+	  "bgRed": 0,
+	  "bgGreen": 0,
+	  "bgBlue": 0,
+	  "bgAlpha": 0,
+
+	  "// about_zoom": "declare your model's zoom (how 'big' your model is in the rendering area) the value goes from 0 to infinity. the bigger the value goes, the bigger the model is in the rendering area.",
+	  "zoom": 1,
+
+	  "// about_modelXY": "declare your model's position here (where your  model is in the rendering area) the values goes from -1 to 1 but you can technically go beyond too",
+	  "modelX": 0,
+	  "modelY": 0,
+
+	  "// about_rotation": "declare your model's rotation in degrees here. 360 degrees = full rotation.",
+	  "rotation": 0,
+
+	  "// about_modelName":"declare your model name here and place your model in the Resources folder. makesure your [model name].model3.json file is the same as the folder it's in. eg: you should be able to locate the model3.json file at the location: Resources/[my model name]/[my model name].model3.json",
+	  "modelName": "Hiyori",
+
+	  "// about_positioning": "this lets you control which edge the live2D box is attached to. the vertical options are 'top' or 'bottom' and the horizontal options are 'left' or 'right'",
+	  "positionVertical": "bottom",
+	  "positionHorizontal": "left",
+
+	  "// about_positioningOffset": "this lets you control the the number of pixels from the edge of the horizontal and vertical position",
+	  "positionVerticalOffset": 0,
+	  "positionHorizontalOffset": 0,
+
+	  "// about_rendererDimentions": "this is the width and height of the live2D box that is to be displayed in pixels. adjust these to your liking.",
+	  "rendererWidth": 160,
+	  "rendererHeight": 144
+	}
+}
