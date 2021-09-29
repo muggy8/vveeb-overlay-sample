@@ -62,6 +62,9 @@ fetch("configs.json").then(data=>data.json()).then(configs=>{
     setupLive2dModel(live2DSettings)
   }
 
+  let event = new Event("ready", {bubbles: true}); // (2)
+  document.dispatchEvent(event);
+
   function setupYoutubeChatbox(userYoutubeChatSettings){
     let youtubeChatSettings = Object.assign(Object.create(defaultYoutubeChatSettings), userYoutubeChatSettings)
 
