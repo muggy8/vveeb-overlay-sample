@@ -13,7 +13,8 @@ fetch("configs.json").then(data=>data.json()).then(configs=>{
 	  "chatHeight": 144
 	}
 
-  const defaultYoutubeChatSettings = Object.create(defaultChatboxSettings, {
+  const defaultYoutubeChatSettings = 
+  Object.assign(Object.create(defaultChatboxSettings), {
 		"apiKey": "",
 		"channelId": "",
 
@@ -62,7 +63,7 @@ fetch("configs.json").then(data=>data.json()).then(configs=>{
   }
 
   function setupYoutubeChatbox(userYoutubeChatSettings){
-    let youtubeChatSettings = object.create(defaultYoutubeChatSettings, userYoutubeChatSettings)
+    let youtubeChatSettings = Object.assign(Object.create(defaultYoutubeChatSettings), userYoutubeChatSettings)
 
 
     let cssConfigString = `
@@ -87,7 +88,7 @@ fetch("configs.json").then(data=>data.json()).then(configs=>{
   }
 
   function setupLive2dModel(userConfigs){
-    let configs = Object.create(defaultLive2dSettings, userConfigs)
+    let configs = Object.assign(Object.create(defaultLive2dSettings), userConfigs)
 
     function emitModelPosition(){
       window.appHost.emit("zoom", configs.zoom)
