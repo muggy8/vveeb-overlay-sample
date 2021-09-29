@@ -1,5 +1,54 @@
 fetch("configs.json").then(data=>data.json()).then(configs=>{
 
+  const defaultChatboxSettings = {
+		"showChatbox": false,
+
+	  "positionVertical": "top",
+	  "positionHorizontal": "right",
+
+	  "positionVerticalOffset": 0,
+	  "positionHorizontalOffset": 0,
+
+    "chatWidth": 160,
+	  "chatHeight": 144
+	}
+
+  const defaultYoutubeChatSettings = Object.create(defaultChatboxSettings, {
+		"apiKey": "",
+		"channelId": "",
+
+	  "mesageColor": "000000",
+	  "messageOutlineColor": "FFFFFF"
+	})
+
+
+  const defaultLive2dSettings = {
+	  "showModel":false,
+
+	  "bgRed": 1,
+	  "bgGreen": 1,
+	  "bgBlue": 1,
+	  "bgAlpha": 1,
+
+	  "zoom": 1,
+
+	  "modelX": 0,
+	  "modelY": 0,
+
+	  "rotation": 0,
+
+	  "modelName": "Hiyori",
+
+	  "positionVertical": "bottom",
+	  "positionHorizontal": "left",
+
+	  "positionVerticalOffset": 0,
+	  "positionHorizontalOffset": 0,
+
+	  "rendererWidth": 160,
+	  "rendererHeight": 144
+	}
+
   let chatboxSettings = configs.chatboxSettings
   let youtubeChatSettings = configs.youtubeSettings
   Object.assign(youtubeChatSettings, chatboxSettings)
@@ -12,7 +61,10 @@ fetch("configs.json").then(data=>data.json()).then(configs=>{
     setupLive2dModel(live2DSettings)
   }
 
-  function setupYoutubeChatbox(youtubeChatSettings){
+  function setupYoutubeChatbox(userYoutubeChatSettings){
+    let youtubeChatSettings = object.create(defaultYoutubeChatSettings, userYoutubeChatSettings)
+
+
     let cssConfigString = `
       --yt-message-color: #${youtubeChatSettings.mesageColor};
       --yt-message-shadow: #${youtubeChatSettings.messageOutlineColor};
@@ -34,7 +86,9 @@ fetch("configs.json").then(data=>data.json()).then(configs=>{
     }
   }
 
-  function setupLive2dModel(configs){
+  function setupLive2dModel(userConfigs){
+    let configs = Object.create(defaultLive2dSettings, userConfigs)
+
     function emitModelPosition(){
       window.appHost.emit("zoom", configs.zoom)
       window.appHost.emit("bgcolor", [configs.bgRed, configs.bgGreen, configs.bgBlue, configs.bgAlpha])

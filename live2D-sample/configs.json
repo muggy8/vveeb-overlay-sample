@@ -29,10 +29,10 @@
 	  "showModel":false,
 
 	  "// about_background": "declare your model background color here. the values goes from 0 to 1. if you want to have a transparent background, you dont have to chagne anything",
-	  "bgRed": 0,
-	  "bgGreen": 0,
-	  "bgBlue": 0,
-	  "bgAlpha": 0,
+	  "bgRed": 1,
+	  "bgGreen": 1,
+	  "bgBlue": 1,
+	  "bgAlpha": 1,
 
 	  "// about_zoom": "declare your model's zoom (how 'big' your model is in the rendering area) the value goes from 0 to infinity. the bigger the value goes, the bigger the model is in the rendering area.",
 	  "zoom": 1,
